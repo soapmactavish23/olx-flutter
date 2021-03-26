@@ -4,12 +4,12 @@ import 'package:olx/models/Usuario.dart';
 
 import 'InputCustomizado.dart';
 
-class Home extends StatefulWidget {
+class Login extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _LoginState createState() => _LoginState();
 }
 
-class _HomeState extends State<Home> {
+class _LoginState extends State<Login> {
   TextEditingController _controllerEmail = TextEditingController();
   TextEditingController _controllerSenha = TextEditingController();
   bool _cadastrar = false;
@@ -21,14 +21,18 @@ class _HomeState extends State<Home> {
     _auth
         .createUserWithEmailAndPassword(
             email: usuario.email, password: usuario.senha)
-        .then((firebaseUser) {});
+        .then((firebaseUser) {
+          Navigator.pushReplacementNamed(context, "/");
+    });
   }
 
   _logarUsuario(Usuario usuario) {
     _auth
         .signInWithEmailAndPassword(
             email: usuario.email, password: usuario.senha)
-        .then((firebaseUser) {});
+        .then((firebaseUser) {
+      Navigator.pushReplacementNamed(context, "/");
+    });
   }
 
   _validarCampos() {
