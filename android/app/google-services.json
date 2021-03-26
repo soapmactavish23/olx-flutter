@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565708036577",
+    "project_id": "olx-flutter-29aea",
+    "storage_bucket": "olx-flutter-29aea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565708036577:android:eab3486a0025e4f0b25aa0",
+        "android_client_info": {
+          "package_name": "com.example.olx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565708036577-do422ng8im2og8kim6995o564gavbpum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxy90ao0oO3CCQuHXjmKG-6EJ53UYSbqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565708036577-do422ng8im2og8kim6995o564gavbpum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
