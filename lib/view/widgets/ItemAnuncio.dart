@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:olx/models/Anuncio.dart';
 
 class ItemAnuncio extends StatelessWidget {
+
+  Anuncio anuncio;
+  VoidCallback onTapItem;
+  VoidCallback onPressedRemover;
+
+  ItemAnuncio({@required this.anuncio, this.onTapItem, this.onPressedRemover});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTapItem,
       child: Card(
         child: Padding(
           padding: EdgeInsets.all(12),
@@ -13,9 +21,7 @@ class ItemAnuncio extends StatelessWidget {
               SizedBox(
                 width: 120,
                 height: 120,
-                child: Container(
-                  color: Colors.orange,
-                ),
+                child: Image.network(anuncio.fotos[0], fit: BoxFit.cover,),
               ),
               Expanded(
                   flex: 3,
@@ -25,20 +31,20 @@ class ItemAnuncio extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Vídeo Game Nintendo 64",
+                          anuncio.titulo,
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                         ),
-                        Text("R\$ 800,00")
+                        Text("R\$ ${anuncio.preco}")
                       ],
                     ),
                   )),
-              Expanded(
+              if(this.onPressedRemover != null) Expanded(
                   flex: 1,
                   child: FlatButton(
                     color: Colors.red,
                     padding: EdgeInsets.all(10),
-                    onPressed: (){},
+                    onPressed: this.onPressedRemover,
                     child: Icon(Icons.delete, color: Colors.white,),
                   )
               )
