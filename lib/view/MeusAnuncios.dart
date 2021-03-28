@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olx/view/widgets/ItemAnuncio.dart';
 
 class MeusAnuncios extends StatefulWidget {
   @override
@@ -19,7 +20,12 @@ class _MeusAnunciosState extends State<MeusAnuncios> {
           Navigator.pushNamed(context, "/novo-anuncio");
         },
       ),
-      body: Container(),
+      body: ListView.builder(
+        itemCount: 4,
+          itemBuilder: (context, indice){
+            return ItemAnuncio();
+          }
+      ),
     );
   }
 }
