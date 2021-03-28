@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:olx/helper/UsuarioFirebase.dart';
+import 'package:olx/util/UsuarioFirebase.dart';
 import 'package:olx/models/Anuncio.dart';
 import 'package:olx/view/widgets/ItemAnuncio.dart';
 
@@ -51,7 +51,9 @@ class _MeusAnunciosState extends State<MeusAnuncios> {
         .doc(_idUsuario)
         .collection("anuncios")
         .doc(idAnuncio)
-        .delete();
+        .delete().then((_){
+          db.collection("anuncios").doc(idAnuncio).delete();
+    });
   }
 
   @override

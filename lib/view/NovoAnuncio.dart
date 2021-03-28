@@ -4,7 +4,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:olx/helper/UsuarioFirebase.dart';
+import 'package:olx/util/Configuracoes.dart';
+import 'package:olx/util/UsuarioFirebase.dart';
 import 'package:olx/models/Anuncio.dart';
 import 'package:olx/view/widgets/BotaoCustomizado.dart';
 import 'package:olx/view/widgets/InputCustomizado.dart';
@@ -51,7 +52,6 @@ class _NovoAnuncioState extends State<NovoAnuncio> {
     _carregarItensDropdown();
 
     _anuncio = new Anuncio.gerarId();
-
   }
 
   _salvarAnuncio() async {
@@ -68,28 +68,38 @@ class _NovoAnuncioState extends State<NovoAnuncio> {
         .doc(idUsuario)
         .collection("anuncios")
         .doc(_anuncio.id)
-        .set(_anuncio.toMap()).then((_){
-          Navigator.pop(_dialogContext);
-          Navigator.pop(context);
+        .set(_anuncio.toMap())
+        .then((_) {
+      //salvar anúncio público
+      db
+          .collection("anuncios")
+          .doc(_anuncio.id)
+          .set(_anuncio.toMap())
+          .then((_) {
+        Navigator.pop(_dialogContext);
+        Navigator.pop(context);
+      });
     });
   }
 
-  _abrirDialog(BuildContext context){
+  _abrirDialog(BuildContext context) {
     showDialog(
         context: context,
         barrierDismissible: false,
-        builder: (BuildContext context){
+        builder: (BuildContext context) {
           return AlertDialog(
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-              CircularProgressIndicator(),
-              SizedBox(height: 20,),
-              Text("Salvando anúncio...")
-            ],),
+                CircularProgressIndicator(),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("Salvando anúncio...")
+              ],
+            ),
           );
-        }
-    );
+        });
   }
 
   Future _uploadImagens() async {
@@ -109,33 +119,9 @@ class _NovoAnuncioState extends State<NovoAnuncio> {
 
   _carregarItensDropdown() {
     //Categorias
-    _listaItensDropCategorias.add(DropdownMenuItem(
-      child: Text("Automóvel"),
-      value: "auto",
-    ));
+    _listaItensDropCategorias = Configuracoes.getCategorias();
 
-    _listaItensDropCategorias.add(DropdownMenuItem(
-      child: Text("Imóvel"),
-      value: "imovel",
-    ));
-
-    _listaItensDropCategorias.add(DropdownMenuItem(
-      child: Text("Eletrônico"),
-      value: "eletro",
-    ));
-
-    _listaItensDropCategorias.add(DropdownMenuItem(
-      child: Text("Moda"),
-      value: "moda",
-    ));
-
-    //Estados
-    for (var estado in Estados.listaEstadosSigla) {
-      _listaItensDropEstados.add(DropdownMenuItem(
-        child: Text(estado),
-        value: estado,
-      ));
-    }
+    _listaItensDropEstados = Configuracoes.getEstados();
   }
 
   @override
