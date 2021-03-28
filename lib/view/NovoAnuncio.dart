@@ -1,7 +1,9 @@
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:olx/view/widgets/BotaoCustomizado.dart';
+import 'package:olx/view/widgets/InputCustomizado.dart';
 import 'dart:io';
 
 import 'package:validadores/Validador.dart';
@@ -244,7 +246,66 @@ class _NovoAnuncioState extends State<NovoAnuncio> {
                   ],
                 ),
                 //Caixas de textos e botoes
-                Text("Caixas de textos"),
+                Padding(
+                    padding: EdgeInsets.only(bottom: 15),
+                    child: InputCustomizado(
+                      hint: "Título",
+                      validator: (valor){
+                        return Validador()
+                            .add(Validar.OBRIGATORIO,
+                            msg: "Campo Obrigatório")
+                            .valido(valor);
+                      },
+                    ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 15),
+                  child: InputCustomizado(
+                    hint: "Preço",
+                    type: TextInputType.number,
+                    inputFormatters: [
+                      WhitelistingTextInputFormatter.digitsOnly,
+                      RealInputFormatter(centavos: true)
+                    ],
+                    validator: (valor){
+                      return Validador()
+                          .add(Validar.OBRIGATORIO,
+                          msg: "Campo Obrigatório")
+                          .valido(valor);
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 15),
+                  child: InputCustomizado(
+                    hint: "Telefone",
+                    type: TextInputType.number,
+                    inputFormatters: [
+                      WhitelistingTextInputFormatter.digitsOnly,
+                      TelefoneInputFormatter()
+                    ],
+                    validator: (valor){
+                      return Validador()
+                          .add(Validar.OBRIGATORIO,
+                          msg: "Campo Obrigatório")
+                          .valido(valor);
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 15),
+                  child: InputCustomizado(
+                    hint: "Descrição (200 caracteres)",
+                    maxLines: null,
+                    validator: (valor){
+                      return Validador()
+                          .add(Validar.OBRIGATORIO,
+                          msg: "Campo Obrigatório")
+                          .maxLength(200)
+                          .valido(valor);
+                    },
+                  ),
+                ),
                 BotaoCustomizado(
                   texto: "Cadastrar anúncio",
                   onPressed: () {
