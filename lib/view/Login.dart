@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:olx/models/Usuario.dart';
-
-import 'InputCustomizado.dart';
+import 'widgets/BotaoCustomizado.dart';
+import 'package:olx/view/widgets/InputCustomizado.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
         .createUserWithEmailAndPassword(
             email: usuario.email, password: usuario.senha)
         .then((firebaseUser) {
-          Navigator.pushReplacementNamed(context, "/");
+      Navigator.pushReplacementNamed(context, "/");
     });
   }
 
@@ -105,22 +105,20 @@ class _LoginState extends State<Login> {
                       onChanged: (bool valor) {
                         setState(() {
                           _cadastrar = valor;
+                          _cadastrar
+                              ? _textoBotao = "Cadastrar"
+                              : _textoBotao = "Entrar";
                         });
                       },
                     ),
                     Text("Cadastrar")
                   ],
                 ),
-                RaisedButton(
-                    child: Text(
-                      _cadastrar ? _textoBotao = "Cadastrar" : _textoBotao = "Entrar",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    color: Color(0xff9c27b0),
-                    padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
-                    onPressed: (){
-                      _validarCampos();
-                    }
+                BotaoCustomizado(
+                  texto: _textoBotao,
+                  onPressed: (){
+                    _validarCampos();
+                  },
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20),
