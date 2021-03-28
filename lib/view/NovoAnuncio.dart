@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:olx/view/widgets/BotaoCustomizado.dart';
 import 'dart:io';
 
@@ -11,7 +12,22 @@ class _NovoAnuncioState extends State<NovoAnuncio> {
   List<File> _listaImagens = List();
   final _formKey = GlobalKey<FormState>();
 
-  _selecionarImagemGaleria() {}
+  _selecionarImagemGaleria() async {
+    File imagemSelecionada;
+
+    final pickedFile =
+        await ImagePicker().getImage(source: ImageSource.gallery);
+
+    imagemSelecionada = File(pickedFile.path);
+
+
+    if(imagemSelecionada != null){
+      setState(() {
+        _listaImagens.add(imagemSelecionada);
+      });
+    }
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +93,47 @@ class _NovoAnuncioState extends State<NovoAnuncio> {
                                   );
                                 }
 
-                                if (_listaImagens.length > 0) {}
+                                if (_listaImagens.length > 0) {
+                                  return Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 8),
+                                      child: GestureDetector(
+                                        onTap: (){
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) => Dialog(
+                                                child: Column(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                  Image.file(_listaImagens[indice]),
+                                                  FlatButton(
+                                                    child: Text("Excluir"),
+                                                    textColor: Colors.red,
+                                                    onPressed: (){
+                                                      setState(() {
+                                                        _listaImagens.removeAt(indice);
+                                                        Navigator.of(context).pop();
+                                                      });
+                                                    },
+                                                  )
+                                                ],),
+                                              )
+                                          );
+                                        },
+                                        child: CircleAvatar(
+                                          radius: 50,
+                                          backgroundImage: FileImage(_listaImagens[indice]),
+                                          child: Container(
+                                            color: Color.fromRGBO(255, 255, 255, 0.4),
+                                            alignment: Alignment.center,
+                                            child: Icon(
+                                              Icons.delete,
+                                              color: Colors.red,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                  );
+                                }
 
                                 return Container();
                               }),
