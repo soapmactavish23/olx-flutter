@@ -63,11 +63,11 @@ class _AnunciosState extends State<Anuncios> {
     FirebaseFirestore db = FirebaseFirestore.instance;
     Query query = db.collection("anuncios");
 
-    if(_itemSelecionadoEstado != null){
+    if (_itemSelecionadoEstado != null) {
       query = query.where("estado", isEqualTo: _itemSelecionadoEstado);
     }
 
-    if(_itemSelecionadoCategoria != null){
+    if (_itemSelecionadoCategoria != null) {
       query = query.where("categoria", isEqualTo: _itemSelecionadoCategoria);
     }
 
@@ -96,6 +96,13 @@ class _AnunciosState extends State<Anuncios> {
 
   @override
   Widget build(BuildContext context) {
+
+    var carregandoDados = Center(
+      child: Column(
+        children: [Text("Carregando anúncios"), CircularProgressIndicator()],
+      ),
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text("OLX"),
@@ -171,49 +178,50 @@ class _AnunciosState extends State<Anuncios> {
             //Listagem de anúncios
             StreamBuilder(
                 stream: _controller.stream,
-                builder: (context, snapshot){
-                  switch( snapshot.connectionState ){
+                builder: (context, snapshot) {
+                  switch (snapshot.connectionState) {
                     case ConnectionState.none:
                     case ConnectionState.waiting:
+                      return carregandoDados;
                     case ConnectionState.active:
                     case ConnectionState.done:
-
                       QuerySnapshot querySnapshot = snapshot.data;
 
-                      if( querySnapshot.docs.length == 0 ){
+                      if (querySnapshot.docs.length == 0) {
                         return Container(
                           padding: EdgeInsets.all(25),
-                          child: Text("Nenhum anúncio! :( ", style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold
-                          ),),
+                          child: Text(
+                            "Nenhum anúncio! :( ",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
                         );
                       }
 
                       return Expanded(
                         child: ListView.builder(
                             itemCount: querySnapshot.docs.length,
-                            itemBuilder: (_, indice){
-
-                              List<DocumentSnapshot> anuncios = querySnapshot.docs.toList();
-                              DocumentSnapshot documentSnapshot = anuncios[indice];
-                              Anuncio anuncio = Anuncio.fromDocumentSnapshot(documentSnapshot);
+                            itemBuilder: (_, indice) {
+                              List<DocumentSnapshot> anuncios =
+                                  querySnapshot.docs.toList();
+                              DocumentSnapshot documentSnapshot =
+                                  anuncios[indice];
+                              Anuncio anuncio = Anuncio.fromDocumentSnapshot(
+                                  documentSnapshot);
 
                               return ItemAnuncio(
                                 anuncio: anuncio,
-                                onTapItem: (){
-
+                                onTapItem: () {
+                                  Navigator.pushNamed(
+                                      context, "/detalhes-anuncio",
+                                      arguments: anuncio);
                                 },
                               );
-
-                            }
-                        ),
+                            }),
                       );
-
                   }
                   return Container();
-                }
-            )
+                })
           ],
         ),
       ),
