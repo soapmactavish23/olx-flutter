@@ -13,7 +13,6 @@ class InputCustomizado extends StatelessWidget {
   final Function(String) validator;
   final Function(String) onSaved;
 
-
   InputCustomizado({
     @required this.controller,
     @required this.hint,
@@ -21,7 +20,7 @@ class InputCustomizado extends StatelessWidget {
     this.autofocus = false,
     this.type = TextInputType.text,
     this.inputFormatters,
-    this.maxLines,
+    this.maxLines = 1,
     this.validator,
     this.onSaved,
   });
