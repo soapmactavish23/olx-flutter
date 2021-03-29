@@ -98,6 +98,11 @@ class _MeusAnunciosState extends State<MeusAnuncios> {
 
                   return ItemAnuncio(
                     anuncio: anuncio,
+                    onTapItem: (){
+                      Navigator.pushNamed(
+                          context, "/detalhes-anuncio",
+                          arguments: anuncio);
+                    },
                     onPressedRemover: () {
                       showDialog(
                           context: context,
