@@ -1,6 +1,50 @@
-# olx
+<h1 align="center">
+   <img src="https://lh3.googleusercontent.com/AY_iABUoACySXpTswEXqs57IouBIfuyp7vQW0Js4iwQu6s9JhdOQ8qvFccg4N6MyXgggiz61_s3aVASLkfEqVGe4aW7JPw6kF2oTyxuqOk5lZ06Amn4AWoRSY-R_woquMrX199kqvjQFCFDsZbf0YvDdJVqCbGYofLDfP6Gp9RlBMxcMPXwbakai_z7aywCWyx7EZzlZ9yfomUPK1bC5O6mvoBINGBHbAYwvShBOGOgmh7RTt1AtZMeSz3ixvprje4ww_8YylvNX4zFsZ8AVFdMnqzi1x8trFHwdkqA5AEzoVc_DekzclWcs9wdMFeMNPdKj1Wr-M6cGDGq8LrfIWQBw-nXAbG-pQRJkeQjcMKzsQGpSdP-h3jQ764j4XYz-rk4Iy8AGLMyTVaQ-L-8134H5gp-KZLxVGT7CJ9O_QTdTKtKw1o4qbTsJVA2ujmzEOZV3fI6cY3ZoUzGGTpqDOu6Hn0RCTQIkppfGlpztmtN5Mfc-bcRwqP2YheI9rcD4F3llGyzSClpXW0gyAUAGlAfzjQiJQhz1fYL73I4RWNlo4EGIF3oIKZSWIyg4K7jBh2ZwT7KO3vIj2bsnZMrOTj3gfRzK7K1162CdBktciKr1LbHR9NNjR249jyfI1l4-su86zvoGPBGBFAmWzGuqMVVqBRqb3ttFY-nW_dcqY0Q6zQtIRblmT6us8f3rrm3pSnasklCEgFmpz0sO-GkNYU0EMg=w232-h500-no?authuser=0" width="200">
+</h1>
 
-OLX clone desenvolvido em Flutter, disponível para Android e iOS
+<h4 align="center"> 
+	🚧 Olx Clone 🚀 Concluido...  🚧
+</h4>
+
+## 📚 Descrição
+
+ - OLX clone desenvolvido em Flutter, disponível para Android e iOS
+
+## ✅ Funções
+  
+  - [x] Login
+  - [x] Cadastro
+  - [x] Novo Anúncio
+  - [x] Meus Anúncios
+  - [x] Lista de Anúncios
+  - [x] Detalhes do Anúncio
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="20" width="20"/> [Flutter](https://flutter.dev/?gclid=Cj0KCQjwkbuKBhDRARIsAALysV4sMSKWcOxrlBmdtlCcf3MAfNdH1ehbbWi6ZjjjdypPLsSvdTFiqOYaAon3EALw_wcB&gclsrc=aw.ds)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="20" width="20"/> [Dart](https://dart.dev/)
+
+## 📱 Plataforma adotada
+
+  - Android;
+  - iOS;
+
+<p float="left">
+	<img src="https://lh3.googleusercontent.com/BJ_mEm489oNA4sG-Ibk3Ll-EykD4vmFAqlv_eoU1rsBbr2V0TNXGXVBBHpjfjhEpgLabYzECJf-gaT-TBhAaqVXbUMTaN_lLNWqX0VFgXIAu6nUlf6h3fpEcQtJ48u-fJ6UMlAaGkH2gy3h6yzZxjD8leamt5O8udhWrdZ1xxMRTU_T_4t7QwjuZBxyG8Yi6P3L1oepiQ-kmAtNa9zDlemJaxws3KVkGzvqhXRSAZCYQ0EJiYEKdlHspsOQ0GW-CMdXxCpRdUtt-TeFF9IsYbpGadkSUf_8JdjIsbripSCRFA3iwTG8_JR1LCwvmBNZyOQllyZmC0WUYb2vrcyquCFKpd3q8YsFbt78s56MtLS1xp2TBTKhmVcIDAWWe-9ND32EaefeM5FEENaGy9jzkRQWfRzO7DGrEXCcc7hZWHnx4KXaK2rMjsxQMFgX5UZIH1zjmHdTuY23JiattlWTQMtNvMYa9HlfPyz4jGtF4OTB9HtDHi9kpJltq0nFKi59IizPhLJD_h4KSfTR8xwVkIqt6tFs1-MGKATCPMCDaHxsmJYIMAUmOwfqGBjvXWYdGgGo-RjfCMEsomIkht2C2zmd0ReuxgPuCBfWVzJVAYpSV3Kf96qNnL6plTZAbh8f0kQSnGeMETv7vTRULdhStnYyUNcF1KJkJsfca9PA8Lmfcxe-PO0y8UG2Tv93ihehSinqkiEzva-itwreuqQStOOiU_g=w411-h845-no?authuser=0" width="200">
+	<img src="https://lh3.googleusercontent.com/GkIw-vIZek8s7t2br0EkOFX9kDd4TUw_9GhSy9eJvOqSEZtxKqaoV12h6CYvVsRywiUlmtOasNDkfx0qjonFiQdSRq6FyHGEO3n6nBrBkPPfkrHyD1dGhF2je0XCb-e6qsvK4hJjnEa7WePc2iWatDWXEDJP87O0_ERoJ6SxYSIRr_Beu81z_HVB3rCA_uB7VWYCW9H_pICFdt2Zr351YvChINvSLgfAqBh5oS1kdEVI0n09XiEMYwxgrkRbI4SPKWUmENPBEbdKiHsbtCSPYERK3znWuFGw9ovUa60UdO-gKgG0ual7c7H4w3da7vu7d8lr0u1zVy-DvG-XCypCnpqxzHvOxSl0YCdnMVI57FZAldcyOEC_nVyUxkMHRur1kmuGnzPCbOBOoH-fwMFU1Sb7tcfOgyRwW5XiaAu6w0NFAKJdDvGYdQPLXAGQ0-6CMGer9Q5VmTkE0mOidR_rRx4DqPXv88R7BFpLQdEcSxz-D4ebPGLBPLYw5RBv5OhaNZMDdaSLIiNlvg4ABfeub--4vnBP00X_WqtewhAHK_BDeWHCeMBPXDnN1BBbhwm-SfsDTK47LDv_EpiQg6r0kWcPyUI1C6qg40qAmbHMfxJt45DvAZwAnKJl--v5HfWIlYy-qnpCpSEl1e1vlujf2N2QMX3yVRKRx9GzjdQrKmBDuHg1Z9TsYEq_zzwRdBTpyRJlD5MQD_XEmiIGvfVGsbiONw=w417-h851-no?authuser=0" width="200">
+  <img src="https://lh3.googleusercontent.com/iU4GhTnBnb4mUIg2xdK23EFOhAZeWP8eJDGwjGAjN9psGI0MEjSjlbm4k66o8XZLKohr5eZ7S7m9Wjio3k2TC2tslTqR9i_HvQusfNAyYDXiDyIXLfVBESJ28HmHs28S_rdxowBEcqnhiOvBcbIXOYdtIAu0X4IMBEz_IHHg4xdhsEUIyrY50hLpMdBqicdR3xsGXO0iVRGSz8WeT75dhAtv_kVFi1YXzoExuBJbpkTldz2j0OtESW2H6foPJsBjveO1HzcRqONlevtS8LIl6dLpH-SvvSGMLJrdNm5J0nPQGg0bPbNjUL3dzRn0Tp02bfLM_uhtcIntqRy7vkGKiNS0e05WCcnZtqUdcQ7R8ML3dz6EZLXknIjay4711Ydmb2eA2ylKYMH12DftbzXUwiT33BgAjes_nIB5pE7RgwLhDo2mMa_MfclOlEmeFUa2qeNhZXT3QWKZO79ymA1FfDYv23n_FJufG0-9sRewrSB__HtSFG7NUBSjSZf8bISP7DS6pMMZgx-rmM0Jyc6n0B5Qn-GD4JIvtzUqXRdSsEGjbj9zYssh3jWAx4DMAVxbVyIf11rKp3in2KwNxFvXG_U0U34iduFuU8-Q7nxgoqzrqq7OlYzpQjExOvXyLVENLrBkZ7-C_Ouo7rXi_jP9Hz6mdXjUBrdyXZlzQDNMpyj6bZlk3BhCB1GZAJhAJtioGnKszuk_tbXuy07IfAjir3DrZA=w412-h845-no?authuser=0" width="200">
+</p>
+
+<p float="left">
+	<img src="https://lh3.googleusercontent.com/JChorX6HJBalXmLVfyVAXsJmK-hNOPYfaj2AdMbF7Rkx-dq7keqWPQdS0NSAe_yrzkQOc8Beoj2pyTMGrVBz8EfztTG9107XLuSh3mug53qdMPDbP3-JclwZ5blAVoXy5qhpB1sr739XfzB9E7eVxW1Rscg28JYBPIRtiT-EHW9ZBq65m_jDHiUlqHsg2NN2NhFIesj9HWviXfqHxIC91Ath138zQJiqFMW58V-UR-GdGi89KNYz5l8M7qL-aKyQt3LL6xwXADT8CZNZ9dNGvIEfFa1NyAxqeOQ_VST1c0WBRB5h3c5wOAZsudqbxg6r_5-ilW2Rc9DkyUeBF-Sc88dkUSjKvC08MUwGBis0TQbhmzzG-9_k8eXgu7WNgED-XLoCXqKC-bS1CiYuwiSylqfqa7B-l19fhwZDeCVA2PC2_HKG6OU0yRfvZgJrBTfix4CuafNHArI_MNhn_BNnVlEa7zhoq0CiZYtexUnzx-odIZhddhmv65ybkks45BosETnxZBqpl5u5CmVcJg3XWFu--Uz7k1agC0SsOzsbVm3cZFDpqyG1_KM0Oa30bUPKB7v5JW03h9qa8Qw9sUbiUjzn-i7MPnupFagnfTuxj91qc6xQos2JhQ_2-TrI88ZYs1-3HKQJUPP8jcCWbPYb-ub0E7VfbJFHbfyFn4w5z3ENADAaZ_3Cc5YHLEHe3PrvBQXLPv-DZLOxV9QRS-vQGC8HTQ=w418-h849-no?authuser=0" width="200">
+	<img src="https://lh3.googleusercontent.com/HtfFvfqLSPk0PobnDcAPLGCUeZL95FYH6upsDei5YR9lHOQy1WB9q9jYqD0m3Iq1bI8Dvxres-CqpowysQ48UDNmYLrH5c1bohMLY9qNY_Lryg-OjEHmoowIbx2C5Derpv8UZlXQMXm3bgO41y6pY2u8OXg-Ce8StRuhIGZ5kjOmkfqMgTdFwCl4n38QN_5s7f3OyOmO-m204AUpvGDcwHIUav1H96J6uIaAe2kz8Sua9p7yMNUyzGZIkKRkjeQ7uP60IzlLt74MvQbpVWj_GMIlh2D219HzO2ItFXiW9ZOb79KUrNudXiYR72JtpJs1gSkMc9ZkWUsQsLGLC5HpTM_nZgEShYEVx8m7c1QcWPPDe7iGhgVJemXz3Fz82CXK52xnN83I6arXIjpV00ZgZkrqMRXgU-YGRSP3Tf84dhhGxeJh4bfEO-SbnIcJaXJf7pZUQWvK62_otTnHwvTh-Sf0PqiKucwl70NYbzGmxcToA_aw_Zxd6FrJIye-4DMP4IUlDYtft2V3MQKqdasnTjE_JvUO_hoc_DZSOgWlB4wsX5DB9lbux8p-5gris1tHgPh_nPIyfgGHrGEBRxB52-MBEjUK0DJE7Gr_ZaJnGb9jZzhp9eWuwoUr8wAORAfrfmHRtNncr6ULrbRxQ8fBbrbftx0MRSY5mAfs_lHvKZ0gXFCqktMy76soRh3pc2J_6wPtYRgGyq4fooIcQfozEIf2ig=w419-h854-no?authuser=0" width="200">
+</p>
+
+## 📥 Download
+
+  - [Android](https://drive.google.com/file/d/1A4jGq35jZt_gptP2xowYaVTTC80ozi9B/view?usp=sharing)
 
 ## Getting Started
 
