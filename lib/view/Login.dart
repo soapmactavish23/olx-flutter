@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
         .createUserWithEmailAndPassword(
             email: usuario.email, password: usuario.senha)
         .then((firebaseUser) {
-      Navigator.pushReplacementNamed(context, "/");
+      Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
     });
   }
 
@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
         .signInWithEmailAndPassword(
             email: usuario.email, password: usuario.senha)
         .then((firebaseUser) {
-      Navigator.pushReplacementNamed(context, "/");
+      Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
     });
   }
 
@@ -116,7 +116,7 @@ class _LoginState extends State<Login> {
                 ),
                 BotaoCustomizado(
                   texto: _textoBotao,
-                  onPressed: (){
+                  onPressed: () {
                     _validarCampos();
                   },
                 ),
