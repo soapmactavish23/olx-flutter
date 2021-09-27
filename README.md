@@ -31,6 +31,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
   - Android;
   - iOS;
 
+## 📸 Screenshot
+
 <p float="left">
 	<img src="https://firebasestorage.googleapis.com/v0/b/apostas-e1af2.appspot.com/o/flutter%2Folx%2Flogin.PNG?alt=media&token=e8202d09-51e0-4e69-af44-086007746117" width="200">
 	<img src="https://firebasestorage.googleapis.com/v0/b/apostas-e1af2.appspot.com/o/flutter%2Folx%2FNovo%20Anuncio.PNG?alt=media&token=316fc8ba-f92e-4a00-80f9-49314586acd7" width="200">
